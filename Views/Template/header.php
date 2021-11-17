@@ -163,17 +163,20 @@
 				<span class="lbl">Dashboard</span>
 			</a>
 		</li>
+		<?php if($_SESSION['userData']['id_rol'] != 4){ ?>
 		<li class="gold tickets-menu menu">
 			<a href="<?php echo base_url() ?>ticket/tickets">
 				<i class="font-icon glyphicon glyphicon-comment"></i>
 				<span class="lbl">Tickets</span>
 			</a>
 		</li>
+		<?php } ?>
 		<li class="green mis-tickets-menu menu">
 			<a href="">
 				<i class="font-icon glyphicon glyphicon-tags"></i>
 				<span class="lbl">Mis tickets</span>
 			</a>
+		<?php if($_SESSION['userData']['id_rol'] == 1){ ?>
 		<li class="red with-sub usuarios-menu menu">
 			<a href="<?php echo base_url() ?>usuario/usuarios"">
 							<i class=" font-icon glyphicon glyphicon-user"></i>
@@ -186,10 +189,11 @@
 				<span class="lbl">Ajustes</span>
 			</span>
 			<ul>
-				<li><a href="ui-form.html"><span class="lbl">Departamentos</span></a></li>
-				<li><a href="ui-buttons.html"><span class="lbl">Categorías</span></a></li>
+				<li><a href=""><span class="lbl">Departamentos</span></a></li>
+				<li><a href=""><span class="lbl">Categorías</span></a></li>
 			</ul>
 		</li>
+		<?php } ?>
 		</section>
 	</nav>
 	<div class="mobile-menu-left-overlay"></div>

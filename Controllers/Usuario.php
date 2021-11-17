@@ -23,9 +23,13 @@
          * @return void
          */
         public function usuarios(){
-            $data['page_title'] = "Usuarios";
-            $data['page_functions'] = media() . "js/usuarios/usuarios.js";
-            $this->views->getView($this, "usuarios", $data);
+            if($_SESSION['userData']['id_rol'] == 1){
+                $data['page_title'] = "Usuarios";
+                $data['page_functions'] = media() . "js/usuarios/usuarios.js";
+                $this->views->getView($this, "usuarios", $data);
+            } else {
+                header('location: ' . base_url());
+            }
         }
 
         /**

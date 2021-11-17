@@ -23,9 +23,13 @@
          * @return void
          */
         public function tickets(){
-            $data['page_title'] = "Tickets";
-            $data['page_functions'] = media() . "js/tickets/tickets.js";
-            $this->views->getView($this, "tickets", $data);
+            if($_SESSION['userData']['id_rol'] != 4){
+                $data['page_title'] = "Tickets";
+                $data['page_functions'] = media() . "js/tickets/tickets.js";
+                $this->views->getView($this, "tickets", $data);
+            } else {
+                header('location: ' . base_url());
+            }
         }
 
         /**
