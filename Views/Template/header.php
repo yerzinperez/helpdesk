@@ -172,13 +172,13 @@
 		</li>
 		<?php } ?>
 		<li class="green mis-tickets-menu menu">
-			<a href="">
+			<a href="<?php echo base_url() ?>MisTickets/misTickets">
 				<i class="font-icon glyphicon glyphicon-tags"></i>
 				<span class="lbl">Mis tickets</span>
 			</a>
 		<?php if($_SESSION['userData']['id_rol'] == 1){ ?>
 		<li class="red with-sub usuarios-menu menu">
-			<a href="<?php echo base_url() ?>usuario/usuarios"">
+			<a href="<?php echo base_url() ?>usuario/usuarios">
 							<i class=" font-icon glyphicon glyphicon-user"></i>
 				<span class="lbl">Usuarios</span>
 			</a>

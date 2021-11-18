@@ -11,7 +11,7 @@
          */
         function getView($controller, $view, $data=""){
             $controller = get_class($controller);
-            if($controller == 'Ticket'){
+            if($controller == 'Ticket' || $controller == 'MisTickets'){
                 $view = "Views/Tickets/" . $view . ".php";
             } else {
                 $view = "Views/" . $controller . "/" . $view . ".php";

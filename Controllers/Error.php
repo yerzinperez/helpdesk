@@ -16,7 +16,8 @@
          * @return void
          */
         public function notFound(){
-            $this->views->getView($this, "error");
+            $data['page_title'] = "Error";
+            $this->views->getView($this, "error", $data);
         }
     }
 
